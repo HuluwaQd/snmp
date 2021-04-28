@@ -32,7 +32,7 @@ public class SNMPInfoController {
             dev1.setIp("192.168.30.111");
             Device dev2 = new Device();
             dev2.setId(2L);
-            dev2.setIp("192.168.34.5");
+            dev2.setIp("192.168.241.128");
             devs.add(dev1);
             devs.add(dev2);
             return SnmpManager.getIpsInfo(devs);
