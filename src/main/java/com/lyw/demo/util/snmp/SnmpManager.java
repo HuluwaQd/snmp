@@ -125,7 +125,7 @@ public class SnmpManager implements CommandResponder{
      */
     private static String systemcore = "windows";
 
-    private SnmpManager(String requestIp){
+    public SnmpManager(String requestIp){
         this.requestIp = requestIp;
     }
 
@@ -331,7 +331,7 @@ public class SnmpManager implements CommandResponder{
      * 发送trap
      * @param message trap信息
      */
-    private void sendTrap(String message) throws IOException {
+    public void sendTrap(String message) throws IOException {
         //初始化trap snmp
         sendTrapInit();
         PDU pdu = new PDU();
@@ -357,7 +357,7 @@ public class SnmpManager implements CommandResponder{
      * 监听方法
      * @throws IOException
      */
-    private void doListen() throws IOException {
+    public void doListen() throws IOException {
         Snmp listenSnmp = doListenInit();
         listenSnmp.listen();
         listenSnmp.addCommandResponder(this);
